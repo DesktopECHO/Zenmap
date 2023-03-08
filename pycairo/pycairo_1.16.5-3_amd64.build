@@ -1,0 +1,574 @@
+ dpkg-buildpackage -us -uc -ui
+dpkg-buildpackage: info: source package pycairo
+dpkg-buildpackage: info: source version 1.16.5-3
+dpkg-buildpackage: info: source distribution focal
+dpkg-buildpackage: info: source changed by Zero <zero@441.surf>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture amd64
+ debian/rules clean
+dh clean --buildsystem=pybuild --with python2,python3,sphinxdoc
+   debian/rules override_dh_auto_clean
+make[1]: Entering directory '/zenmap/pycairo-1.16.5'
+dh_auto_clean --buildsystem=pybuild
+I: pybuild base:232: python2.7 setup.py clean 
+running clean
+removing '/zenmap/pycairo-1.16.5/.pybuild/cpython2_2.7/build' (and everything under it)
+'build/bdist.linux-x86_64' does not exist -- can't clean it
+'build/scripts-2.7' does not exist -- can't clean it
+I: pybuild base:232: python2.7-dbg setup.py clean 
+running clean
+removing '/zenmap/pycairo-1.16.5/.pybuild/cpython2_2.7_dbg/build' (and everything under it)
+'build/bdist.linux-x86_64' does not exist -- can't clean it
+'build/scripts-2.7' does not exist -- can't clean it
+I: pybuild base:232: python3.9 setup.py clean 
+running clean
+removing '/zenmap/pycairo-1.16.5/.pybuild/cpython3_3.9/build' (and everything under it)
+'build/bdist.linux-x86_64' does not exist -- can't clean it
+'build/scripts-3.9' does not exist -- can't clean it
+I: pybuild base:232: python3.9-dbg setup.py clean 
+running clean
+removing '/zenmap/pycairo-1.16.5/.pybuild/cpython3_3.9_dbg/build' (and everything under it)
+'build/bdist.linux-x86_64' does not exist -- can't clean it
+'build/scripts-3.9' does not exist -- can't clean it
+rm -rf debian/tmp-doc
+make[1]: Leaving directory '/zenmap/pycairo-1.16.5'
+   dh_autoreconf_clean -O--buildsystem=pybuild
+   dh_clean -O--buildsystem=pybuild
+ dpkg-source -b .
+dpkg-source: info: using source format '3.0 (quilt)'
+dpkg-source: info: building pycairo using existing ./pycairo_1.16.5.orig.tar.gz
+dpkg-source: info: using patch list from debian/patches/series
+dpkg-source: info: building pycairo in pycairo_1.16.5-3.debian.tar.xz
+dpkg-source: info: building pycairo in pycairo_1.16.5-3.dsc
+ debian/rules build
+dh build --buildsystem=pybuild --with python2,python3,sphinxdoc
+   dh_update_autotools_config -O--buildsystem=pybuild
+   dh_autoreconf -O--buildsystem=pybuild
+   dh_auto_configure -O--buildsystem=pybuild
+I: pybuild base:232: python2.7 setup.py config 
+running config
+I: pybuild base:232: python2.7-dbg setup.py config 
+running config
+I: pybuild base:232: python3.9 setup.py config 
+running config
+I: pybuild base:232: python3.9-dbg setup.py config 
+running config
+   debian/rules override_dh_auto_build
+make[1]: Entering directory '/zenmap/pycairo-1.16.5'
+dh_auto_build --buildsystem=pybuild
+I: pybuild base:232: /usr/bin/python2 setup.py build 
+running build
+running build_py
+creating /zenmap/pycairo-1.16.5/.pybuild/cpython2_2.7/build/cairo
+copying cairo/__init__.py -> /zenmap/pycairo-1.16.5/.pybuild/cpython2_2.7/build/cairo
+running build_ext
+building 'cairo._cairo' extension
+creating build
+creating build/temp.linux-x86_64-2.7
+creating build/temp.linux-x86_64-2.7/cairo
+x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python2.7 -c cairo/device.c -o build/temp.linux-x86_64-2.7/cairo/device.o -fno-strict-aliasing
+x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python2.7 -c cairo/bufferproxy.c -o build/temp.linux-x86_64-2.7/cairo/bufferproxy.o -fno-strict-aliasing
+x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python2.7 -c cairo/error.c -o build/temp.linux-x86_64-2.7/cairo/error.o -fno-strict-aliasing
+x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python2.7 -c cairo/cairomodule.c -o build/temp.linux-x86_64-2.7/cairo/cairomodule.o -fno-strict-aliasing
+x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python2.7 -c cairo/context.c -o build/temp.linux-x86_64-2.7/cairo/context.o -fno-strict-aliasing
+x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python2.7 -c cairo/font.c -o build/temp.linux-x86_64-2.7/cairo/font.o -fno-strict-aliasing
+x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python2.7 -c cairo/matrix.c -o build/temp.linux-x86_64-2.7/cairo/matrix.o -fno-strict-aliasing
+x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python2.7 -c cairo/path.c -o build/temp.linux-x86_64-2.7/cairo/path.o -fno-strict-aliasing
+x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python2.7 -c cairo/pattern.c -o build/temp.linux-x86_64-2.7/cairo/pattern.o -fno-strict-aliasing
+x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python2.7 -c cairo/region.c -o build/temp.linux-x86_64-2.7/cairo/region.o -fno-strict-aliasing
+x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python2.7 -c cairo/surface.c -o build/temp.linux-x86_64-2.7/cairo/surface.o -fno-strict-aliasing
+x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python2.7 -c cairo/enums.c -o build/temp.linux-x86_64-2.7/cairo/enums.o -fno-strict-aliasing
+x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python2.7 -c cairo/misc.c -o build/temp.linux-x86_64-2.7/cairo/misc.o -fno-strict-aliasing
+x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python2.7 -c cairo/glyph.c -o build/temp.linux-x86_64-2.7/cairo/glyph.o -fno-strict-aliasing
+x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python2.7 -c cairo/rectangle.c -o build/temp.linux-x86_64-2.7/cairo/rectangle.o -fno-strict-aliasing
+x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python2.7 -c cairo/textcluster.c -o build/temp.linux-x86_64-2.7/cairo/textcluster.o -fno-strict-aliasing
+x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python2.7 -c cairo/textextents.c -o build/temp.linux-x86_64-2.7/cairo/textextents.o -fno-strict-aliasing
+x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -ffile-prefix-map=/build/python2.7-vgIf7a/python2.7-2.7.18=. -fstack-protector-strong -Wformat -Werror=format-security -Wl,-z,relro -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC build/temp.linux-x86_64-2.7/cairo/device.o build/temp.linux-x86_64-2.7/cairo/bufferproxy.o build/temp.linux-x86_64-2.7/cairo/error.o build/temp.linux-x86_64-2.7/cairo/cairomodule.o build/temp.linux-x86_64-2.7/cairo/context.o build/temp.linux-x86_64-2.7/cairo/font.o build/temp.linux-x86_64-2.7/cairo/matrix.o build/temp.linux-x86_64-2.7/cairo/path.o build/temp.linux-x86_64-2.7/cairo/pattern.o build/temp.linux-x86_64-2.7/cairo/region.o build/temp.linux-x86_64-2.7/cairo/surface.o build/temp.linux-x86_64-2.7/cairo/enums.o build/temp.linux-x86_64-2.7/cairo/misc.o build/temp.linux-x86_64-2.7/cairo/glyph.o build/temp.linux-x86_64-2.7/cairo/rectangle.o build/temp.linux-x86_64-2.7/cairo/textcluster.o build/temp.linux-x86_64-2.7/cairo/textextents.o -lcairo -o /zenmap/pycairo-1.16.5/.pybuild/cpython2_2.7/build/cairo/_cairo.so
+I: pybuild base:232: /usr/bin/python2-dbg setup.py build 
+running build
+running build_py
+creating /zenmap/pycairo-1.16.5/.pybuild/cpython2_2.7_dbg/build/cairo
+copying cairo/__init__.py -> /zenmap/pycairo-1.16.5/.pybuild/cpython2_2.7_dbg/build/cairo
+running build_ext
+building 'cairo._cairo' extension
+creating build/temp.linux-x86_64-2.7-pydebug
+creating build/temp.linux-x86_64-2.7-pydebug/cairo
+x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python2.7_d -c cairo/device.c -o build/temp.linux-x86_64-2.7-pydebug/cairo/device.o -fno-strict-aliasing
+x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python2.7_d -c cairo/bufferproxy.c -o build/temp.linux-x86_64-2.7-pydebug/cairo/bufferproxy.o -fno-strict-aliasing
+x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python2.7_d -c cairo/error.c -o build/temp.linux-x86_64-2.7-pydebug/cairo/error.o -fno-strict-aliasing
+x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python2.7_d -c cairo/cairomodule.c -o build/temp.linux-x86_64-2.7-pydebug/cairo/cairomodule.o -fno-strict-aliasing
+x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python2.7_d -c cairo/context.c -o build/temp.linux-x86_64-2.7-pydebug/cairo/context.o -fno-strict-aliasing
+x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python2.7_d -c cairo/font.c -o build/temp.linux-x86_64-2.7-pydebug/cairo/font.o -fno-strict-aliasing
+x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python2.7_d -c cairo/matrix.c -o build/temp.linux-x86_64-2.7-pydebug/cairo/matrix.o -fno-strict-aliasing
+x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python2.7_d -c cairo/path.c -o build/temp.linux-x86_64-2.7-pydebug/cairo/path.o -fno-strict-aliasing
+x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python2.7_d -c cairo/pattern.c -o build/temp.linux-x86_64-2.7-pydebug/cairo/pattern.o -fno-strict-aliasing
+x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python2.7_d -c cairo/region.c -o build/temp.linux-x86_64-2.7-pydebug/cairo/region.o -fno-strict-aliasing
+x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python2.7_d -c cairo/surface.c -o build/temp.linux-x86_64-2.7-pydebug/cairo/surface.o -fno-strict-aliasing
+x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python2.7_d -c cairo/enums.c -o build/temp.linux-x86_64-2.7-pydebug/cairo/enums.o -fno-strict-aliasing
+x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python2.7_d -c cairo/misc.c -o build/temp.linux-x86_64-2.7-pydebug/cairo/misc.o -fno-strict-aliasing
+x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python2.7_d -c cairo/glyph.c -o build/temp.linux-x86_64-2.7-pydebug/cairo/glyph.o -fno-strict-aliasing
+x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python2.7_d -c cairo/rectangle.c -o build/temp.linux-x86_64-2.7-pydebug/cairo/rectangle.o -fno-strict-aliasing
+x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python2.7_d -c cairo/textcluster.c -o build/temp.linux-x86_64-2.7-pydebug/cairo/textcluster.o -fno-strict-aliasing
+x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python2.7_d -c cairo/textextents.c -o build/temp.linux-x86_64-2.7-pydebug/cairo/textextents.o -fno-strict-aliasing
+x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -g -O0 -Wall -Wstrict-prototypes -Wdate-time -g -O0 -ffile-prefix-map=/build/python2.7-vgIf7a/python2.7-2.7.18=. -fstack-protector -Wformat -Werror=format-security -Wdate-time -g -O0 -ffile-prefix-map=/build/python2.7-vgIf7a/python2.7-2.7.18=. -fstack-protector -Wformat -Werror=format-security -Wl,-z,relro -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC build/temp.linux-x86_64-2.7-pydebug/cairo/device.o build/temp.linux-x86_64-2.7-pydebug/cairo/bufferproxy.o build/temp.linux-x86_64-2.7-pydebug/cairo/error.o build/temp.linux-x86_64-2.7-pydebug/cairo/cairomodule.o build/temp.linux-x86_64-2.7-pydebug/cairo/context.o build/temp.linux-x86_64-2.7-pydebug/cairo/font.o build/temp.linux-x86_64-2.7-pydebug/cairo/matrix.o build/temp.linux-x86_64-2.7-pydebug/cairo/path.o build/temp.linux-x86_64-2.7-pydebug/cairo/pattern.o build/temp.linux-x86_64-2.7-pydebug/cairo/region.o build/temp.linux-x86_64-2.7-pydebug/cairo/surface.o build/temp.linux-x86_64-2.7-pydebug/cairo/enums.o build/temp.linux-x86_64-2.7-pydebug/cairo/misc.o build/temp.linux-x86_64-2.7-pydebug/cairo/glyph.o build/temp.linux-x86_64-2.7-pydebug/cairo/rectangle.o build/temp.linux-x86_64-2.7-pydebug/cairo/textcluster.o build/temp.linux-x86_64-2.7-pydebug/cairo/textextents.o -lcairo -o /zenmap/pycairo-1.16.5/.pybuild/cpython2_2.7_dbg/build/cairo/_cairo_d.so
+I: pybuild base:232: /usr/bin/python3 setup.py build 
+running build
+running build_py
+creating /zenmap/pycairo-1.16.5/.pybuild/cpython3_3.9/build/cairo
+copying cairo/__init__.py -> /zenmap/pycairo-1.16.5/.pybuild/cpython3_3.9/build/cairo
+running build_ext
+building 'cairo._cairo' extension
+creating build/temp.linux-x86_64-3.9
+creating build/temp.linux-x86_64-3.9/cairo
+x86_64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python3.9 -c cairo/bufferproxy.c -o build/temp.linux-x86_64-3.9/cairo/bufferproxy.o
+x86_64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python3.9 -c cairo/cairomodule.c -o build/temp.linux-x86_64-3.9/cairo/cairomodule.o
+x86_64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python3.9 -c cairo/context.c -o build/temp.linux-x86_64-3.9/cairo/context.o
+x86_64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python3.9 -c cairo/device.c -o build/temp.linux-x86_64-3.9/cairo/device.o
+x86_64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python3.9 -c cairo/enums.c -o build/temp.linux-x86_64-3.9/cairo/enums.o
+x86_64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python3.9 -c cairo/error.c -o build/temp.linux-x86_64-3.9/cairo/error.o
+x86_64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python3.9 -c cairo/font.c -o build/temp.linux-x86_64-3.9/cairo/font.o
+x86_64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python3.9 -c cairo/glyph.c -o build/temp.linux-x86_64-3.9/cairo/glyph.o
+x86_64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python3.9 -c cairo/matrix.c -o build/temp.linux-x86_64-3.9/cairo/matrix.o
+x86_64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python3.9 -c cairo/misc.c -o build/temp.linux-x86_64-3.9/cairo/misc.o
+x86_64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python3.9 -c cairo/path.c -o build/temp.linux-x86_64-3.9/cairo/path.o
+x86_64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python3.9 -c cairo/pattern.c -o build/temp.linux-x86_64-3.9/cairo/pattern.o
+x86_64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python3.9 -c cairo/rectangle.c -o build/temp.linux-x86_64-3.9/cairo/rectangle.o
+x86_64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python3.9 -c cairo/region.c -o build/temp.linux-x86_64-3.9/cairo/region.o
+x86_64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python3.9 -c cairo/surface.c -o build/temp.linux-x86_64-3.9/cairo/surface.o
+cairo/surface.c: In function ‘surface_set_mime_data’:
+cairo/surface.c:478:3: warning: ‘PyObject_AsReadBuffer’ is deprecated [-Wdeprecated-declarations]
+  478 |   res = PyObject_AsReadBuffer (obj, (const void **)&buffer, &buffer_len);
+      |   ^~~
+In file included from /usr/include/python3.9/Python.h:151,
+                 from cairo/surface.c:33:
+/usr/include/python3.9/abstract.h:343:17: note: declared here
+  343 | PyAPI_FUNC(int) PyObject_AsReadBuffer(PyObject *obj,
+      |                 ^~~~~~~~~~~~~~~~~~~~~
+cairo/surface.c: In function ‘image_surface_create_for_data’:
+cairo/surface.c:805:3: warning: ‘PyObject_AsWriteBuffer’ is deprecated [-Wdeprecated-declarations]
+  805 |   res = PyObject_AsWriteBuffer (obj, (void **)&buffer, &buffer_len);
+      |   ^~~
+In file included from /usr/include/python3.9/Python.h:151,
+                 from cairo/surface.c:33:
+/usr/include/python3.9/abstract.h:354:17: note: declared here
+  354 | PyAPI_FUNC(int) PyObject_AsWriteBuffer(PyObject *obj,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~
+x86_64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python3.9 -c cairo/textcluster.c -o build/temp.linux-x86_64-3.9/cairo/textcluster.o
+x86_64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python3.9 -c cairo/textextents.c -o build/temp.linux-x86_64-3.9/cairo/textextents.o
+x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-z,relro -g -fwrapv -O2 -Wl,-z,relro -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 build/temp.linux-x86_64-3.9/cairo/bufferproxy.o build/temp.linux-x86_64-3.9/cairo/cairomodule.o build/temp.linux-x86_64-3.9/cairo/context.o build/temp.linux-x86_64-3.9/cairo/device.o build/temp.linux-x86_64-3.9/cairo/enums.o build/temp.linux-x86_64-3.9/cairo/error.o build/temp.linux-x86_64-3.9/cairo/font.o build/temp.linux-x86_64-3.9/cairo/glyph.o build/temp.linux-x86_64-3.9/cairo/matrix.o build/temp.linux-x86_64-3.9/cairo/misc.o build/temp.linux-x86_64-3.9/cairo/path.o build/temp.linux-x86_64-3.9/cairo/pattern.o build/temp.linux-x86_64-3.9/cairo/rectangle.o build/temp.linux-x86_64-3.9/cairo/region.o build/temp.linux-x86_64-3.9/cairo/surface.o build/temp.linux-x86_64-3.9/cairo/textcluster.o build/temp.linux-x86_64-3.9/cairo/textextents.o -lcairo -o /zenmap/pycairo-1.16.5/.pybuild/cpython3_3.9/build/cairo/_cairo.cpython-39-x86_64-linux-gnu.so
+I: pybuild base:232: /usr/bin/python3-dbg setup.py build 
+running build
+running build_py
+creating /zenmap/pycairo-1.16.5/.pybuild/cpython3_3.9_dbg/build/cairo
+copying cairo/__init__.py -> /zenmap/pycairo-1.16.5/.pybuild/cpython3_3.9_dbg/build/cairo
+running build_ext
+building 'cairo._cairo' extension
+creating build/temp.linux-x86_64-3.9-pydebug
+creating build/temp.linux-x86_64-3.9-pydebug/cairo
+x86_64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -g -Og -Wall -g -Og -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -Og -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python3.9d -c cairo/bufferproxy.c -o build/temp.linux-x86_64-3.9-pydebug/cairo/bufferproxy.o
+x86_64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -g -Og -Wall -g -Og -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -Og -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python3.9d -c cairo/cairomodule.c -o build/temp.linux-x86_64-3.9-pydebug/cairo/cairomodule.o
+x86_64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -g -Og -Wall -g -Og -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -Og -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python3.9d -c cairo/context.c -o build/temp.linux-x86_64-3.9-pydebug/cairo/context.o
+x86_64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -g -Og -Wall -g -Og -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -Og -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python3.9d -c cairo/device.c -o build/temp.linux-x86_64-3.9-pydebug/cairo/device.o
+x86_64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -g -Og -Wall -g -Og -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -Og -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python3.9d -c cairo/enums.c -o build/temp.linux-x86_64-3.9-pydebug/cairo/enums.o
+x86_64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -g -Og -Wall -g -Og -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -Og -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python3.9d -c cairo/error.c -o build/temp.linux-x86_64-3.9-pydebug/cairo/error.o
+x86_64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -g -Og -Wall -g -Og -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -Og -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python3.9d -c cairo/font.c -o build/temp.linux-x86_64-3.9-pydebug/cairo/font.o
+x86_64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -g -Og -Wall -g -Og -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -Og -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python3.9d -c cairo/glyph.c -o build/temp.linux-x86_64-3.9-pydebug/cairo/glyph.o
+x86_64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -g -Og -Wall -g -Og -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -Og -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python3.9d -c cairo/matrix.c -o build/temp.linux-x86_64-3.9-pydebug/cairo/matrix.o
+x86_64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -g -Og -Wall -g -Og -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -Og -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python3.9d -c cairo/misc.c -o build/temp.linux-x86_64-3.9-pydebug/cairo/misc.o
+x86_64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -g -Og -Wall -g -Og -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -Og -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python3.9d -c cairo/path.c -o build/temp.linux-x86_64-3.9-pydebug/cairo/path.o
+x86_64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -g -Og -Wall -g -Og -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -Og -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python3.9d -c cairo/pattern.c -o build/temp.linux-x86_64-3.9-pydebug/cairo/pattern.o
+x86_64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -g -Og -Wall -g -Og -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -Og -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python3.9d -c cairo/rectangle.c -o build/temp.linux-x86_64-3.9-pydebug/cairo/rectangle.o
+x86_64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -g -Og -Wall -g -Og -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -Og -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python3.9d -c cairo/region.c -o build/temp.linux-x86_64-3.9-pydebug/cairo/region.o
+x86_64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -g -Og -Wall -g -Og -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -Og -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python3.9d -c cairo/surface.c -o build/temp.linux-x86_64-3.9-pydebug/cairo/surface.o
+cairo/surface.c: In function ‘surface_set_mime_data’:
+cairo/surface.c:478:3: warning: ‘PyObject_AsReadBuffer’ is deprecated [-Wdeprecated-declarations]
+  478 |   res = PyObject_AsReadBuffer (obj, (const void **)&buffer, &buffer_len);
+      |   ^~~
+In file included from /usr/include/python3.9d/Python.h:151,
+                 from cairo/surface.c:33:
+/usr/include/python3.9d/abstract.h:343:17: note: declared here
+  343 | PyAPI_FUNC(int) PyObject_AsReadBuffer(PyObject *obj,
+      |                 ^~~~~~~~~~~~~~~~~~~~~
+cairo/surface.c: In function ‘image_surface_create_for_data’:
+cairo/surface.c:805:3: warning: ‘PyObject_AsWriteBuffer’ is deprecated [-Wdeprecated-declarations]
+  805 |   res = PyObject_AsWriteBuffer (obj, (void **)&buffer, &buffer_len);
+      |   ^~~
+In file included from /usr/include/python3.9d/Python.h:151,
+                 from cairo/surface.c:33:
+/usr/include/python3.9d/abstract.h:354:17: note: declared here
+  354 | PyAPI_FUNC(int) PyObject_AsWriteBuffer(PyObject *obj,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~
+x86_64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -g -Og -Wall -g -Og -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -Og -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python3.9d -c cairo/textcluster.c -o build/temp.linux-x86_64-3.9-pydebug/cairo/textcluster.o
+x86_64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -g -Og -Wall -g -Og -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -Og -ffile-prefix-map=/build/python3.9-RNBry6/python3.9-3.9.2=. -fstack-protector-strong -Wformat -Werror=format-security -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DPYCAIRO_VERSION_MAJOR=1 -DPYCAIRO_VERSION_MINOR=16 -DPYCAIRO_VERSION_MICRO=2 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/python3.9d -c cairo/textextents.c -o build/temp.linux-x86_64-3.9-pydebug/cairo/textextents.o
+x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,relro -g -O2 -ffile-prefix-map=/zenmap/pycairo-1.16.5=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 build/temp.linux-x86_64-3.9-pydebug/cairo/bufferproxy.o build/temp.linux-x86_64-3.9-pydebug/cairo/cairomodule.o build/temp.linux-x86_64-3.9-pydebug/cairo/context.o build/temp.linux-x86_64-3.9-pydebug/cairo/device.o build/temp.linux-x86_64-3.9-pydebug/cairo/enums.o build/temp.linux-x86_64-3.9-pydebug/cairo/error.o build/temp.linux-x86_64-3.9-pydebug/cairo/font.o build/temp.linux-x86_64-3.9-pydebug/cairo/glyph.o build/temp.linux-x86_64-3.9-pydebug/cairo/matrix.o build/temp.linux-x86_64-3.9-pydebug/cairo/misc.o build/temp.linux-x86_64-3.9-pydebug/cairo/path.o build/temp.linux-x86_64-3.9-pydebug/cairo/pattern.o build/temp.linux-x86_64-3.9-pydebug/cairo/rectangle.o build/temp.linux-x86_64-3.9-pydebug/cairo/region.o build/temp.linux-x86_64-3.9-pydebug/cairo/surface.o build/temp.linux-x86_64-3.9-pydebug/cairo/textcluster.o build/temp.linux-x86_64-3.9-pydebug/cairo/textextents.o -lcairo -o /zenmap/pycairo-1.16.5/.pybuild/cpython3_3.9_dbg/build/cairo/_cairo.cpython-39d-x86_64-linux-gnu.so
+python3 -m sphinx -bhtml docs debian/tmp-doc/html
+Running Sphinx v3.4.3
+making output directory... done
+loading intersphinx inventory from https://docs.python.org/2.7/objects.inv...
+loading intersphinx inventory from https://docs.python.org/3.6/objects.inv...
+building [mo]: targets for 0 po files that are out of date
+building [html]: targets for 25 source files that are out of date
+updating environment: [new config] 25 added, 0 changed, 0 removed
+reading sources... [  4%] changelog
+reading sources... [  8%] examples
+reading sources... [ 12%] faq
+reading sources... [ 16%] index
+reading sources... [ 20%] integration
+reading sources... [ 24%] pycairo_c_api
+/usr/lib/python3/dist-packages/docutils/parsers/rst/states.py:2147: RemovedInSphinx40Warning: highlightlang directive is deprecated. Please use highlight directive instead.
+  result = directive_instance.run()
+reading sources... [ 28%] reference/constants
+reading sources... [ 32%] reference/context
+reading sources... [ 36%] reference/devices
+reading sources... [ 40%] reference/enums
+reading sources... [ 44%] reference/exceptions
+reading sources... [ 48%] reference/glyph
+reading sources... [ 52%] reference/index
+reading sources... [ 56%] reference/legacy_constants
+reading sources... [ 60%] reference/matrix
+reading sources... [ 64%] reference/paths
+reading sources... [ 68%] reference/patterns
+reading sources... [ 72%] reference/rectangle
+reading sources... [ 76%] reference/region
+reading sources... [ 80%] reference/surfaces
+reading sources... [ 84%] reference/text
+reading sources... [ 88%] reference/textcluster
+reading sources... [ 92%] reference/textextents
+reading sources... [ 96%] resources
+reading sources... [100%] tutorial
+
+/zenmap/pycairo-1.16.5/docs/pycairo_c_api.rst:115: WARNING: Invalid C declaration: Expected end of definition. [error at 8]
+  cairo_t * PycairoContext_GET(PycairoContext *obj)
+  --------^
+looking for now-outdated files... none found
+pickling environment... done
+checking consistency... done
+preparing documents... done
+writing output... [  4%] changelog
+writing output... [  8%] examples
+writing output... [ 12%] faq
+writing output... [ 16%] index
+writing output... [ 20%] integration
+writing output... [ 24%] pycairo_c_api
+writing output... [ 28%] reference/constants
+writing output... [ 32%] reference/context
+writing output... [ 36%] reference/devices
+writing output... [ 40%] reference/enums
+writing output... [ 44%] reference/exceptions
+writing output... [ 48%] reference/glyph
+writing output... [ 52%] reference/index
+writing output... [ 56%] reference/legacy_constants
+writing output... [ 60%] reference/matrix
+writing output... [ 64%] reference/paths
+writing output... [ 68%] reference/patterns
+writing output... [ 72%] reference/rectangle
+writing output... [ 76%] reference/region
+writing output... [ 80%] reference/surfaces
+writing output... [ 84%] reference/text
+writing output... [ 88%] reference/textcluster
+writing output... [ 92%] reference/textextents
+writing output... [ 96%] resources
+writing output... [100%] tutorial
+
+generating indices... genindex done
+writing additional pages... search done
+copying images... [100%] images/pycairo.svg
+
+copying static files... done
+copying extra files... done
+dumping search index in English (code: en)... done
+dumping object inventory... done
+build succeeded, 1 warning.
+
+The HTML pages are in debian/tmp-doc/html.
+# to fix lintian: privacy-breach-generic
+sed -ir 's|src="https:[^"]*|src="|' debian/tmp-doc/html/index.html
+make[1]: Leaving directory '/zenmap/pycairo-1.16.5'
+   dh_auto_test -O--buildsystem=pybuild
+I: pybuild base:232: cd /zenmap/pycairo-1.16.5/.pybuild/cpython2_2.7/build; python2.7 -m pytest tests
+============================= test session starts ==============================
+platform linux2 -- Python 2.7.18, pytest-4.6.9, py-1.8.1, pluggy-0.13.0
+rootdir: /zenmap/pycairo-1.16.5
+collected 248 items / 3 skipped / 245 selected
+
+tests/test_api.py .................                                      [  6%]
+tests/test_context.py .................................................. [ 27%]
+................                                                         [ 33%]
+tests/test_device.py ..........                                          [ 37%]
+tests/test_enums.py .......                                              [ 40%]
+tests/test_error.py ....                                                 [ 41%]
+tests/test_font.py .............................                         [ 53%]
+tests/test_glyph.py ..                                                   [ 54%]
+tests/test_matrix.py ...........                                         [ 58%]
+tests/test_path.py ....                                                  [ 60%]
+tests/test_pattern.py ..............................                     [ 72%]
+tests/test_rectangle.py ...                                              [ 73%]
+tests/test_region.py ...........                                         [ 78%]
+tests/test_surface.py .................................................. [ 98%]
+.                                                                        [ 98%]
+tests/test_textcluster.py .                                              [ 99%]
+tests/test_textextents.py ..                                             [100%]
+
+==================== 248 passed, 3 skipped in 1.69 seconds =====================
+I: pybuild base:232: cd /zenmap/pycairo-1.16.5/.pybuild/cpython2_2.7_dbg/build; python2.7-dbg -m pytest tests
+============================= test session starts ==============================
+platform linux2 -- Python 2.7.18, pytest-4.6.9, py-1.8.1, pluggy-0.13.0
+rootdir: /zenmap/pycairo-1.16.5
+collected 248 items / 3 skipped / 245 selected
+
+tests/test_api.py .................                                      [  6%]
+tests/test_context.py .................................................. [ 27%]
+................                                                         [ 33%]
+tests/test_device.py ..........                                          [ 37%]
+tests/test_enums.py .......                                              [ 40%]
+tests/test_error.py ....                                                 [ 41%]
+tests/test_font.py .............................                         [ 53%]
+tests/test_glyph.py ..                                                   [ 54%]
+tests/test_matrix.py ...........                                         [ 58%]
+tests/test_path.py ....                                                  [ 60%]
+tests/test_pattern.py ..............................                     [ 72%]
+tests/test_rectangle.py ...                                              [ 73%]
+tests/test_region.py ...........                                         [ 78%]
+tests/test_surface.py .................................................. [ 98%]
+.                                                                        [ 98%]
+tests/test_textcluster.py .                                              [ 99%]
+tests/test_textextents.py ..                                             [100%]
+
+==================== 248 passed, 3 skipped in 4.56 seconds =====================
+I: pybuild base:232: cd /zenmap/pycairo-1.16.5/.pybuild/cpython3_3.9/build; python3.9 -m pytest tests
+============================= test session starts ==============================
+platform linux -- Python 3.9.2, pytest-6.0.2, py-1.10.0, pluggy-0.13.0
+rootdir: /zenmap/pycairo-1.16.5
+collected 248 items / 3 skipped / 245 selected
+
+tests/test_api.py .................                                      [  6%]
+tests/test_context.py .................................................. [ 27%]
+................                                                         [ 33%]
+tests/test_device.py ..........                                          [ 37%]
+tests/test_enums.py .......                                              [ 40%]
+tests/test_error.py ....                                                 [ 41%]
+tests/test_font.py .............................                         [ 53%]
+tests/test_glyph.py ..                                                   [ 54%]
+tests/test_matrix.py ...........                                         [ 58%]
+tests/test_path.py ....                                                  [ 60%]
+tests/test_pattern.py ..............................                     [ 72%]
+tests/test_rectangle.py ...                                              [ 73%]
+tests/test_region.py ...........                                         [ 78%]
+tests/test_surface.py .................................................. [ 98%]
+.                                                                        [ 98%]
+tests/test_textcluster.py .                                              [ 99%]
+tests/test_textextents.py ..                                             [100%]
+
+======================== 248 passed, 3 skipped in 1.18s ========================
+I: pybuild base:232: cd /zenmap/pycairo-1.16.5/.pybuild/cpython3_3.9_dbg/build; python3.9-dbg -m pytest tests
+/usr/lib/python3/dist-packages/_pytest/compat.py:340: PytestDeprecationWarning: The TerminalReporter.writer attribute is deprecated, use TerminalReporter._tw instead at your own risk.
+See https://docs.pytest.org/en/stable/deprecations.html#terminalreporter-writer for more information.
+  return getattr(object, name, default)
+============================= test session starts ==============================
+platform linux -- Python 3.9.2, pytest-6.0.2, py-1.10.0, pluggy-0.13.0
+rootdir: /zenmap/pycairo-1.16.5
+collected 248 items / 3 skipped / 245 selected
+
+tests/test_api.py .................                                      [  6%]
+tests/test_context.py .................................................. [ 27%]
+................                                                         [ 33%]
+tests/test_device.py ..........                                          [ 37%]
+tests/test_enums.py .......                                              [ 40%]
+tests/test_error.py ....                                                 [ 41%]
+tests/test_font.py .............................                         [ 53%]
+tests/test_glyph.py ..                                                   [ 54%]
+tests/test_matrix.py ...........                                         [ 58%]
+tests/test_path.py ....                                                  [ 60%]
+tests/test_pattern.py ..............................                     [ 72%]
+tests/test_rectangle.py ...                                              [ 73%]
+tests/test_region.py ...........                                         [ 78%]
+tests/test_surface.py .................................................. [ 98%]
+.                                                                        [ 98%]
+tests/test_textcluster.py .                                              [ 99%]
+tests/test_textextents.py ..                                             [100%]
+
+=============================== warnings summary ===============================
+.pybuild/cpython3_3.9_dbg/build/tests/test_api.py::test_surface
+  /zenmap/pycairo-1.16.5/.pybuild/cpython3_3.9_dbg/build/tests/test_api.py:96: ResourceWarning: unclosed file <_io.BufferedRandom name=11>
+    s = cairo.PSSurface(f, w, h)
+
+.pybuild/cpython3_3.9_dbg/build/tests/test_api.py::test_surface
+  /zenmap/pycairo-1.16.5/.pybuild/cpython3_3.9_dbg/build/tests/test_api.py:101: ResourceWarning: unclosed file <_io.BufferedRandom name=12>
+    f, w, h = tfi.TemporaryFile(mode='w+b'), 100, 100
+
+.pybuild/cpython3_3.9_dbg/build/tests/test_api.py::test_surface
+  /usr/lib/python3/dist-packages/_pytest/python.py:180: ResourceWarning: unclosed file <_io.BufferedRandom name=11>
+    result = testfunction(**testargs)
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+================== 248 passed, 3 skipped, 3 warnings in 2.20s ==================
+   create-stamp debian/debhelper-build-stamp
+ debian/rules binary
+dh binary --buildsystem=pybuild --with python2,python3,sphinxdoc
+   dh_testroot -O--buildsystem=pybuild
+   dh_prep -O--buildsystem=pybuild
+   dh_auto_install -O--buildsystem=pybuild
+I: pybuild base:232: /usr/bin/python2 setup.py install --root /zenmap/pycairo-1.16.5/debian/tmp 
+running install
+running build
+running build_py
+running build_ext
+running install_lib
+creating /zenmap/pycairo-1.16.5/debian/tmp
+creating /zenmap/pycairo-1.16.5/debian/tmp/usr
+creating /zenmap/pycairo-1.16.5/debian/tmp/usr/lib
+creating /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python2.7
+creating /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python2.7/dist-packages
+creating /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python2.7/dist-packages/cairo
+copying /zenmap/pycairo-1.16.5/.pybuild/cpython2_2.7/build/cairo/_cairo.so -> /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python2.7/dist-packages/cairo
+copying /zenmap/pycairo-1.16.5/.pybuild/cpython2_2.7/build/cairo/__init__.py -> /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python2.7/dist-packages/cairo
+copying /zenmap/pycairo-1.16.5/.pybuild/cpython2_2.7/build/cairo/__init__.pyc -> /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python2.7/dist-packages/cairo
+byte-compiling /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python2.7/dist-packages/cairo/__init__.py to __init__.pyc
+running install_pkgconfig
+creating /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/pkgconfig
+Writing /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/pkgconfig/pycairo.pc
+pkg-config prefix: /usr
+running install_pycairo_header
+creating /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python2.7/dist-packages/cairo/include
+copying cairo/pycairo.h -> /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python2.7/dist-packages/cairo/include
+creating /zenmap/pycairo-1.16.5/debian/tmp/usr/include
+creating /zenmap/pycairo-1.16.5/debian/tmp/usr/include/pycairo
+copying cairo/pycairo.h -> /zenmap/pycairo-1.16.5/debian/tmp/usr/include/pycairo
+running install_egg_info
+Writing /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python2.7/dist-packages/pycairo-1.16.2.egg-info
+I: pybuild base:232: /usr/bin/python2-dbg setup.py install --root /zenmap/pycairo-1.16.5/debian/tmp 
+running install
+running build
+running build_py
+running build_ext
+running install_lib
+copying /zenmap/pycairo-1.16.5/.pybuild/cpython2_2.7_dbg/build/cairo/_cairo_d.so -> /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python2.7/dist-packages/cairo
+copying /zenmap/pycairo-1.16.5/.pybuild/cpython2_2.7_dbg/build/cairo/__init__.py -> /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python2.7/dist-packages/cairo
+copying /zenmap/pycairo-1.16.5/.pybuild/cpython2_2.7_dbg/build/cairo/__init__.pyc -> /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python2.7/dist-packages/cairo
+byte-compiling /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python2.7/dist-packages/cairo/__init__.py to __init__.pyc
+running install_pkgconfig
+Writing /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/pkgconfig/pycairo.pc
+pkg-config prefix: /usr
+running install_pycairo_header
+copying cairo/pycairo.h -> /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python2.7/dist-packages/cairo/include
+copying cairo/pycairo.h -> /zenmap/pycairo-1.16.5/debian/tmp/usr/include/pycairo
+running install_egg_info
+Removing /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python2.7/dist-packages/pycairo-1.16.2.egg-info
+Writing /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python2.7/dist-packages/pycairo-1.16.2.egg-info
+I: pybuild base:232: /usr/bin/python3 setup.py install --root /zenmap/pycairo-1.16.5/debian/tmp 
+running install
+running build
+running build_py
+running build_ext
+running install_lib
+creating /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python3.9
+creating /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python3.9/dist-packages
+creating /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python3.9/dist-packages/cairo
+copying /zenmap/pycairo-1.16.5/.pybuild/cpython3_3.9/build/cairo/_cairo.cpython-39-x86_64-linux-gnu.so -> /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python3.9/dist-packages/cairo
+copying /zenmap/pycairo-1.16.5/.pybuild/cpython3_3.9/build/cairo/__init__.py -> /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python3.9/dist-packages/cairo
+creating /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python3.9/dist-packages/cairo/__pycache__
+copying /zenmap/pycairo-1.16.5/.pybuild/cpython3_3.9/build/cairo/__pycache__/__init__.cpython-39.pyc -> /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python3.9/dist-packages/cairo/__pycache__
+byte-compiling /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python3.9/dist-packages/cairo/__init__.py to __init__.cpython-39.pyc
+running install_pkgconfig
+Writing /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/pkgconfig/py3cairo.pc
+pkg-config prefix: /usr
+running install_pycairo_header
+creating /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python3.9/dist-packages/cairo/include
+copying cairo/pycairo.h -> /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python3.9/dist-packages/cairo/include/py3cairo.h
+copying cairo/pycairo.h -> /zenmap/pycairo-1.16.5/debian/tmp/usr/include/pycairo/py3cairo.h
+running install_egg_info
+Writing /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python3.9/dist-packages/pycairo-1.16.2.egg-info
+I: pybuild base:232: /usr/bin/python3-dbg setup.py install --root /zenmap/pycairo-1.16.5/debian/tmp 
+running install
+running build
+running build_py
+running build_ext
+running install_lib
+copying /zenmap/pycairo-1.16.5/.pybuild/cpython3_3.9_dbg/build/cairo/_cairo.cpython-39d-x86_64-linux-gnu.so -> /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python3.9/dist-packages/cairo
+copying /zenmap/pycairo-1.16.5/.pybuild/cpython3_3.9_dbg/build/cairo/__init__.py -> /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python3.9/dist-packages/cairo
+copying /zenmap/pycairo-1.16.5/.pybuild/cpython3_3.9_dbg/build/cairo/__pycache__/__init__.cpython-39.pyc -> /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python3.9/dist-packages/cairo/__pycache__
+byte-compiling /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python3.9/dist-packages/cairo/__init__.py to __init__.cpython-39.pyc
+running install_pkgconfig
+Writing /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/pkgconfig/py3cairo.pc
+pkg-config prefix: /usr
+running install_pycairo_header
+copying cairo/pycairo.h -> /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python3.9/dist-packages/cairo/include/py3cairo.h
+copying cairo/pycairo.h -> /zenmap/pycairo-1.16.5/debian/tmp/usr/include/pycairo/py3cairo.h
+running install_egg_info
+Removing /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python3.9/dist-packages/pycairo-1.16.2.egg-info
+Writing /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python3.9/dist-packages/pycairo-1.16.2.egg-info
+   debian/rules override_dh_install
+make[1]: Entering directory '/zenmap/pycairo-1.16.5'
+dh_install
+rm -fr /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python*/dist-packages/cairo/__pycache__
+rm -f /zenmap/pycairo-1.16.5/debian/tmp/usr/lib/python*/dist-packages/cairo/*.pyc
+rm -f /zenmap/pycairo-1.16.5/debian/python3-cairo/usr/lib/python3*/*-packages/cairo/_cairo.cpython-*dm-*.so
+make[1]: Leaving directory '/zenmap/pycairo-1.16.5'
+   dh_installdocs -O--buildsystem=pybuild
+   dh_sphinxdoc -O--buildsystem=pybuild
+   dh_installchangelogs -O--buildsystem=pybuild
+   dh_installexamples -O--buildsystem=pybuild
+   dh_systemd_enable -O--buildsystem=pybuild
+   dh_python2 -O--buildsystem=pybuild
+I: dh_python2 fs:343: renaming _cairo.so to _cairo.x86_64-linux-gnu.so
+I: dh_python2 fs:343: renaming _cairo_d.so to _cairo.x86_64-linux-gnu_d.so
+   dh_python3 -O--buildsystem=pybuild
+   dh_installinit -O--buildsystem=pybuild
+   dh_systemd_start -O--buildsystem=pybuild
+   dh_lintian -O--buildsystem=pybuild
+   dh_perl -O--buildsystem=pybuild
+   dh_link -O--buildsystem=pybuild
+   dh_strip_nondeterminism -O--buildsystem=pybuild
+   dh_compress -O--buildsystem=pybuild
+   dh_fixperms -O--buildsystem=pybuild
+   debian/rules override_dh_missing
+make[1]: Entering directory '/zenmap/pycairo-1.16.5'
+dh_missing --fail-missing
+make[1]: Leaving directory '/zenmap/pycairo-1.16.5'
+   debian/rules override_dh_strip
+make[1]: Entering directory '/zenmap/pycairo-1.16.5'
+dh_strip -ppython-cairo  --dbg-package=python-cairo-dbg
+dh_strip -ppython3-cairo --dbg-package=python3-cairo-dbg
+make[1]: Leaving directory '/zenmap/pycairo-1.16.5'
+   dh_makeshlibs -O--buildsystem=pybuild
+   dh_shlibdeps -O--buildsystem=pybuild
+   dh_installdeb -O--buildsystem=pybuild
+   dh_gencontrol -O--buildsystem=pybuild
+dpkg-gencontrol: warning: package python-cairo: substitution variable ${python:Versions} unused, but is defined
+dpkg-gencontrol: warning: package python-cairo-dbg: substitution variable ${python:Depends} unused, but is defined
+dpkg-gencontrol: warning: package python-cairo-dbg: substitution variable ${python:Versions} unused, but is defined
+dpkg-gencontrol: warning: package python-cairo-dev: substitution variable ${python:Depends} unused, but is defined
+dpkg-gencontrol: warning: package python-cairo-dev: substitution variable ${python:Provides} unused, but is defined
+dpkg-gencontrol: warning: package python-cairo-dev: substitution variable ${python:Versions} unused, but is defined
+dpkg-gencontrol: warning: package python3-cairo: substitution variable ${python3:Versions} unused, but is defined
+dpkg-gencontrol: warning: package python3-cairo-dbg: substitution variable ${python3:Depends} unused, but is defined
+dpkg-gencontrol: warning: package python3-cairo-dbg: substitution variable ${python3:Versions} unused, but is defined
+   dh_md5sums -O--buildsystem=pybuild
+   dh_builddeb -O--buildsystem=pybuild
+dpkg-deb: building package 'python-cairo' in '../python-cairo_1.16.5-3_amd64.deb'.
+dpkg-deb: building package 'python-cairo-dbg' in '../python-cairo-dbg_1.16.5-3_amd64.deb'.
+dpkg-deb: building package 'python-cairo-dev' in '../python-cairo-dev_1.16.5-3_all.deb'.
+dpkg-deb: building package 'python3-cairo' in '../python3-cairo_1.16.5-3_amd64.deb'.
+dpkg-deb: building package 'python3-cairo-dbg' in '../python3-cairo-dbg_1.16.5-3_amd64.deb'.
+dpkg-deb: building package 'python3-cairo-dev' in '../python3-cairo-dev_1.16.5-3_all.deb'.
+dpkg-deb: building package 'python3-cairo-doc' in '../python3-cairo-doc_1.16.5-3_all.deb'.
+ dpkg-genbuildinfo
+ dpkg-genchanges  >../pycairo_1.16.5-3_amd64.changes
+dpkg-genchanges: info: including full source code in upload
+ dpkg-source --after-build .
+dpkg-buildpackage: info: full upload (original source is included)
+Now running lintian pycairo_1.16.5-3_amd64.changes ...
+warning: running with root privileges is not recommended!
+E: pycairo changes: bad-distribution-in-changes-file focal
+E: pycairo source: missing-build-dependency-for-dh-addon python2 => python2:any | python2-dev:any | dh-sequence-python2
+E: pycairo source: old-dpmt-vcs
+E: pycairo source: old-dpmt-vcs
+E: pycairo source: python-teams-merged Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+W: python-cairo: multi-arch-same-package-calls-pycompile postinst:6
+W: python3-cairo: multi-arch-same-package-calls-pycompile postinst:6
+W: pycairo source: no-nmu-in-changelog
+W: python-cairo-dev: pkg-config-unavailable-for-cross-compilation usr/lib/pkgconfig/pycairo.pc
+W: python3-cairo-dev: pkg-config-unavailable-for-cross-compilation usr/lib/pkgconfig/py3cairo.pc
+W: pycairo source: source-nmu-has-incorrect-version-number 1.16.5-3
+N: 2 hints overridden (2 errors)
+Finished running lintian.

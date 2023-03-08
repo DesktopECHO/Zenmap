@@ -1,0 +1,58 @@
+Format: 1.8
+Date: Tue, 18 Feb 2020 10:44:55 +0100
+Source: pycairo
+Binary: python-cairo python-cairo-dbg python-cairo-dev python3-cairo python3-cairo-dbg python3-cairo-dev python3-cairo-doc
+Architecture: source amd64 all
+Version: 1.16.5-3
+Distribution: focal
+Urgency: medium
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Changed-By: Zero <zero@441.surf>
+Description:
+ python-cairo - Python bindings for the Cairo vector graphics library
+ python-cairo-dbg - Python bindings for the Cairo vector graphics library (debug exte
+ python-cairo-dev - Python cairo bindings: development files
+ python3-cairo - Python3 bindings for the Cairo vector graphics library
+ python3-cairo-dbg - Python3 bindings for the Cairo vector graphics library (debug ext
+ python3-cairo-dev - Python3 cairo bindings: development files
+ python3-cairo-doc - Python 3 cairo bindings: documentation files
+Changes:
+ pycairo (1.16.5-3) focal; urgency=medium
+ .
+   * No-change rebuild
+Checksums-Sha1:
+ de12e669978b07eaaa9d9b637832c41b845b6eb4 1733 pycairo_1.16.5-3.dsc
+ 0baea424d8e5070fd50f69fdd7dcbdd29167c871 182335 pycairo_1.16.5.orig.tar.gz
+ 136dad39d88fbcc09b8aaa63fe9d6aabb4b42814 15448 pycairo_1.16.5-3.debian.tar.xz
+ 3aee0082817a2eae6097a627cc4404abc28b98c1 12610 pycairo_1.16.5-3_amd64.buildinfo
+ 93851526430abecc55988469a464e0be5bfc8ef5 297904 python-cairo-dbg_1.16.5-3_amd64.deb
+ 620d149026a4365e2a6d601bf7c87bc5188af925 173980 python-cairo-dev_1.16.5-3_all.deb
+ 8f0075c28cfcb3e24a580a2d7dc9e023dc3a7ae7 59400 python-cairo_1.16.5-3_amd64.deb
+ cc0f5cbd6aa6939cbdcef851748374c232877328 337604 python3-cairo-dbg_1.16.5-3_amd64.deb
+ 8006de94a0e1a95a03cdf6bcfb1f7d62d781622b 16596 python3-cairo-dev_1.16.5-3_all.deb
+ a74726086c5855396a5bf5f8c8616ad533459f3b 172208 python3-cairo-doc_1.16.5-3_all.deb
+ 5cd955bb540bd34b4e1c0c39f43305c35e361868 59540 python3-cairo_1.16.5-3_amd64.deb
+Checksums-Sha256:
+ a1c77e4fb1405bef9da74518681860f3b70b8d0c031c30bbdff3ab99c951fa45 1733 pycairo_1.16.5-3.dsc
+ 6903753cae2cadf2733aff373017b6e461dee12b31d65c2f37312652276d1ef8 182335 pycairo_1.16.5.orig.tar.gz
+ a2f3a7646aa0c3164d8f59e8abf8ddc2da4c040f6847c7a352b48e5b318c8eeb 15448 pycairo_1.16.5-3.debian.tar.xz
+ 7c335ccbc7d905b00ba4b56d3dc33657a1962eba249061052dc417ce7132939d 12610 pycairo_1.16.5-3_amd64.buildinfo
+ aae8577af6a50df1382d25bf09cc028b09906beaa85eaf4de6adf9bd2b383126 297904 python-cairo-dbg_1.16.5-3_amd64.deb
+ e3419717c978bf3b7de3ad62b420cecbd6dc030d2b22677d45b981d6225ad63d 173980 python-cairo-dev_1.16.5-3_all.deb
+ 5fd3e2de127c1a55b1815da87a3c800b3fda5d74f978e49f84c2033ca6a69660 59400 python-cairo_1.16.5-3_amd64.deb
+ a2b69559eca4730fb29a41ec099243d596940dc8dcb9848c1b14d230658ccffc 337604 python3-cairo-dbg_1.16.5-3_amd64.deb
+ 288b6823ea7cf61e2cb3d6cb515de7bbd7b02d4dbc6410ecebfeadaca754fea7 16596 python3-cairo-dev_1.16.5-3_all.deb
+ b67fa0947843d05cdf027085834f0d3b0cc947f2187cf6ab7eb356bbb13b5c86 172208 python3-cairo-doc_1.16.5-3_all.deb
+ e0da893c76b541cea85caa94b00f5fc31944fab32035806ddf673b912d418377 59540 python3-cairo_1.16.5-3_amd64.deb
+Files:
+ 06b130a6244bc6f339cf59bb56dbe090 1733 python optional pycairo_1.16.5-3.dsc
+ f27b5a7d01833c4b7ebb686974cfbb5d 182335 python optional pycairo_1.16.5.orig.tar.gz
+ 1839429ef08423356ee3000a405bad6e 15448 python optional pycairo_1.16.5-3.debian.tar.xz
+ a719762302a944062e2467cf5e11a0d8 12610 python optional pycairo_1.16.5-3_amd64.buildinfo
+ 90722a27f479ce2b62e5b7065eb73dae 297904 debug optional python-cairo-dbg_1.16.5-3_amd64.deb
+ 2661843131001fd6f99f9cd2ff80b0f7 173980 python optional python-cairo-dev_1.16.5-3_all.deb
+ aa70de88818178b4ad2bbd1ad7465020 59400 python optional python-cairo_1.16.5-3_amd64.deb
+ 2cc114af208b1ae364b829b0bf15bf58 337604 debug optional python3-cairo-dbg_1.16.5-3_amd64.deb
+ 5fef08437e6a0f1a9e8ea39eab8d2ad8 16596 python optional python3-cairo-dev_1.16.5-3_all.deb
+ a154065e64f211c36eb9997a067e2862 172208 doc optional python3-cairo-doc_1.16.5-3_all.deb
+ 3bc7e3d63959997f168c956c667ff8dc 59540 python optional python3-cairo_1.16.5-3_amd64.deb

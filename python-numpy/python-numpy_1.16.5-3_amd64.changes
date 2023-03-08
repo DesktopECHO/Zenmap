@@ -1,0 +1,35 @@
+Format: 1.8
+Date: Tue, 21 Mar 2023 19:44:25 -0700
+Source: python-numpy
+Binary: python-numpy python-numpy-dbg
+Architecture: source amd64
+Version: 1:1.16.5-3
+Distribution: UNRELEASED
+Urgency: medium
+Maintainer: Sandro Tosi <morph@debian.org>
+Changed-By: Z440-VM11 <root@Z440-VM11.localdomain>
+Description:
+ python-numpy - Numerical Python adds a fast array facility to the Python languag
+ python-numpy-dbg - Fast array facility to the Python language (debug extension)
+Changes:
+ python-numpy (1:1.16.5-3) UNRELEASED; urgency=medium
+ .
+   * Non-maintainer upload.
+Checksums-Sha1:
+ 4a63c32bc5f5bcabffd164105aa0a273e7a5397d 1609 python-numpy_1.16.5-3.dsc
+ aa3fee568b37980156b1f9c649057e14d5474ca9 153500 python-numpy_1.16.5-3.debian.tar.xz
+ 04bd65a93ef52be3beca6201bf3e51365383de0d 10793432 python-numpy-dbg_1.16.5-3_amd64.deb
+ 56488932997427ddf6193404e178b56abaefab0a 7738 python-numpy_1.16.5-3_amd64.buildinfo
+ 03b3eb1688bf8f4f1b44d8cc8f7acbd6a5590e65 2155880 python-numpy_1.16.5-3_amd64.deb
+Checksums-Sha256:
+ 4bd80e347208a78b4064f87ff75ebf5db7b3cd39fe74a896b0fce317a5afca39 1609 python-numpy_1.16.5-3.dsc
+ 1758d1810bb207d182b547fd7a38dc76417c3a0c70359c1438f2ecb2f20ae208 153500 python-numpy_1.16.5-3.debian.tar.xz
+ eed38eb33a9b8583b9d99af03f0f472868c961c04e84472e98a488aeea7cd764 10793432 python-numpy-dbg_1.16.5-3_amd64.deb
+ 7308c6be3b6dff43c2fce4ec8693f58f834f7fc38062e452cdb28695fcbef20c 7738 python-numpy_1.16.5-3_amd64.buildinfo
+ f10ceb0758b4e8126859fea87db9fe58df90ac10d910c47a81ba4727d2474c59 2155880 python-numpy_1.16.5-3_amd64.deb
+Files:
+ 1e4851ed2771e2c995282e66edcfc997 1609 python optional python-numpy_1.16.5-3.dsc
+ de9d6ef911aa4d9e9435b53a27d73d35 153500 python optional python-numpy_1.16.5-3.debian.tar.xz
+ 4c832bad3df2c3b8fc0f10caee735ef1 10793432 debug optional python-numpy-dbg_1.16.5-3_amd64.deb
+ c4ccbc90b067c863d38aa79f1cd589c1 7738 python optional python-numpy_1.16.5-3_amd64.buildinfo
+ 3c35d846c944a72bb1146a9223d0fb98 2155880 python optional python-numpy_1.16.5-3_amd64.deb

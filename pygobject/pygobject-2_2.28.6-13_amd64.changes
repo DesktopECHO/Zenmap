@@ -1,0 +1,36 @@
+Format: 1.8
+Date: Fri, 22 Jul 2016 19:25:33 +0200
+Source: pygobject-2
+Binary: python-gobject-2 python-gobject-2-dbg python-gobject-2-dev
+Architecture: amd64 all
+Version: 2.28.6-13
+Distribution: unstable
+Urgency: low
+Maintainer: Josselin Mouette <joss@debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Description:
+ python-gobject-2 - deprecated static Python bindings for the GObject library
+ python-gobject-2-dbg - deprecated static Python bindings for the GObject library (debug
+ python-gobject-2-dev - development headers for the static GObject Python bindings
+Closes: 831960
+Changes:
+ pygobject-2 (2.28.6-13) unstable; urgency=low
+ .
+   * debian/rules:
+     + Disable silent rules.
+   * Add build-indep and build-arch targets. Closes: #831960.
+Checksums-Sha1:
+ dbf9b92721a965c122584a62c776b75f5dcf43c5 11451 pygobject-2_2.28.6-13_amd64.buildinfo
+ 2666a296f20fa7c3b27d98a5d5781e9bf05d2ac5 601784 python-gobject-2-dbg_2.28.6-13_amd64.deb
+ 653eca4b8f4ba54de46b6c6f7c2ad8a918ea1b75 306720 python-gobject-2-dev_2.28.6-13_all.deb
+ d185c26307af8ea6d0fc3f40427a10ca32cfee2f 289872 python-gobject-2_2.28.6-13_amd64.deb
+Checksums-Sha256:
+ a365218f5fc7ce5b9441846358d6444e8aaa2e97cd3fb9e521b5be21895b40c4 11451 pygobject-2_2.28.6-13_amd64.buildinfo
+ 76b8756f1a56126d2baff26732475c03b200a610af884c0dac0b03ec43306f2e 601784 python-gobject-2-dbg_2.28.6-13_amd64.deb
+ f11cc4364b3b2c49a786135c0c7dfe38e81388b5c7755fb564b3b97dfa8a15ad 306720 python-gobject-2-dev_2.28.6-13_all.deb
+ 40c271405b155f127f59592c726bf65a898ddf4fe15eb523de04cdd65e503e0c 289872 python-gobject-2_2.28.6-13_amd64.deb
+Files:
+ df0e3c851d8c70ca14124534314cc91c 11451 oldlibs optional pygobject-2_2.28.6-13_amd64.buildinfo
+ cdd31075123b6a24883e1526b9dd4e7d 601784 debug extra python-gobject-2-dbg_2.28.6-13_amd64.deb
+ 118e41718ea44599c71ca7d79022999f 306720 oldlibs optional python-gobject-2-dev_2.28.6-13_all.deb
+ a074e65c19247c4df18dd3ad2fd6c929 289872 oldlibs optional python-gobject-2_2.28.6-13_amd64.deb

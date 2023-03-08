@@ -1,0 +1,153 @@
+ dpkg-buildpackage -us -uc -ui -nc -d
+dpkg-buildpackage: info: source package pygobject-2
+dpkg-buildpackage: info: source version 2.28.6-13
+dpkg-buildpackage: info: source distribution unstable
+dpkg-buildpackage: info: source changed by Emilio Pozuelo Monfort <pochu@debian.org>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture amd64
+ debian/rules build
+make: Nothing to be done for 'build'.
+ debian/rules binary
+dh_testdir
+dh_testroot
+dh_installdocs -s
+dh_installdocs: Compatibility levels before 9 are deprecated (level 7 in use)
+dh_installdocs: -s/--same-arch is deprecated; please use -a/--arch instead
+dh_installdocs: This feature will be removed in compat 12.
+dh_installexamples -s
+dh_installexamples: Compatibility levels before 9 are deprecated (level 7 in use)
+dh_installexamples: -s/--same-arch is deprecated; please use -a/--arch instead
+dh_installexamples: This feature will be removed in compat 12.
+dh_installchangelogs -s ChangeLog
+dh_installchangelogs: Compatibility levels before 9 are deprecated (level 7 in use)
+dh_installchangelogs: -s/--same-arch is deprecated; please use -a/--arch instead
+dh_installchangelogs: This feature will be removed in compat 12.
+dh_strip -ppython-gobject-2 --dbg-package=python-gobject-2-dbg
+dh_strip: Compatibility levels before 9 are deprecated (level 7 in use)
+rm -rf debian/python-gobject-2-dbg/usr/share/doc/python-gobject-2-dbg
+ln -sf python-gobject-2 debian/python-gobject-2-dbg/usr/share/doc/python-gobject-2-dbg
+dh_link -s
+dh_link: Compatibility levels before 9 are deprecated (level 7 in use)
+dh_link: -s/--same-arch is deprecated; please use -a/--arch instead
+dh_link: This feature will be removed in compat 12.
+dh_compress -s -X.py
+dh_compress: Compatibility levels before 9 are deprecated (level 7 in use)
+dh_compress: -s/--same-arch is deprecated; please use -a/--arch instead
+dh_compress: This feature will be removed in compat 12.
+dh_fixperms -s
+dh_fixperms: Compatibility levels before 9 are deprecated (level 7 in use)
+dh_fixperms: -s/--same-arch is deprecated; please use -a/--arch instead
+dh_fixperms: This feature will be removed in compat 12.
+dh_python2 -a
+W: dh_python2:479: Please add dh-python package to Build-Depends
+dh_makeshlibs -ppython-gobject-2   -V'python-gobject-2 (>= 2.28.1)'
+dh_makeshlibs: Compatibility levels before 9 are deprecated (level 7 in use)
+dh_makeshlibs -ppython-gobject-2-dbg -V'python-gobject-2-dbg (>= 2.28.1)'
+dh_makeshlibs: Compatibility levels before 9 are deprecated (level 7 in use)
+dh_installdeb -s
+dh_installdeb: Compatibility levels before 9 are deprecated (level 7 in use)
+dh_installdeb: -s/--same-arch is deprecated; please use -a/--arch instead
+dh_installdeb: This feature will be removed in compat 12.
+dh_shlibdeps -s
+dh_shlibdeps: Compatibility levels before 9 are deprecated (level 7 in use)
+dh_shlibdeps: -s/--same-arch is deprecated; please use -a/--arch instead
+dh_shlibdeps: This feature will be removed in compat 12.
+dpkg-shlibdeps: warning: debian/python-gobject-2/usr/lib/python2.7/dist-packages/glib/_glib.so contains an unresolvable reference to symbol PyThread_get_key_value: it's probably a plugin
+dpkg-shlibdeps: warning: 86 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/python-gobject-2-dbg/usr/lib/python2.7/dist-packages/gobject/_gobject_d.so contains an unresolvable reference to symbol PyFloat_Type: it's probably a plugin
+dpkg-shlibdeps: warning: 122 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/python-gobject-2-dbg/usr/lib/python2.7/dist-packages/glib/_glib_d.so contains an unresolvable reference to symbol PyObject_AsFileDescriptor: it's probably a plugin
+dpkg-shlibdeps: warning: 89 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/python-gobject-2/usr/lib/python2.7/dist-packages/gtk-2.0/gio/_gio.so contains an unresolvable reference to symbol PyString_FromStringAndSize: it's probably a plugin
+dpkg-shlibdeps: warning: 72 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: symbol PyErr_SetString used by debian/python-gobject-2-dbg/usr/lib/libpyglib-2.0-python2.7-dbg.so.0.0.0 found in none of the libraries
+dpkg-shlibdeps: warning: symbol PyObject_Repr used by debian/python-gobject-2-dbg/usr/lib/libpyglib-2.0-python2.7-dbg.so.0.0.0 found in none of the libraries
+dpkg-shlibdeps: warning: symbol PyEval_InitThreads used by debian/python-gobject-2-dbg/usr/lib/libpyglib-2.0-python2.7-dbg.so.0.0.0 found in none of the libraries
+dpkg-shlibdeps: warning: symbol PyDict_GetItem used by debian/python-gobject-2-dbg/usr/lib/libpyglib-2.0-python2.7-dbg.so.0.0.0 found in none of the libraries
+dpkg-shlibdeps: warning: symbol PyErr_GivenExceptionMatches used by debian/python-gobject-2-dbg/usr/lib/libpyglib-2.0-python2.7-dbg.so.0.0.0 found in none of the libraries
+dpkg-shlibdeps: warning: symbol _Py_NoneStruct used by debian/python-gobject-2-dbg/usr/lib/libpyglib-2.0-python2.7-dbg.so.0.0.0 found in none of the libraries
+dpkg-shlibdeps: warning: symbol _Py_TrueStruct used by debian/python-gobject-2-dbg/usr/lib/libpyglib-2.0-python2.7-dbg.so.0.0.0 found in none of the libraries
+dpkg-shlibdeps: warning: symbol PyErr_Restore used by debian/python-gobject-2-dbg/usr/lib/libpyglib-2.0-python2.7-dbg.so.0.0.0 found in none of the libraries
+dpkg-shlibdeps: warning: symbol _Py_NegativeRefcount used by debian/python-gobject-2-dbg/usr/lib/libpyglib-2.0-python2.7-dbg.so.0.0.0 found in none of the libraries
+dpkg-shlibdeps: warning: symbol PyInt_FromLong used by debian/python-gobject-2-dbg/usr/lib/libpyglib-2.0-python2.7-dbg.so.0.0.0 found in none of the libraries
+dpkg-shlibdeps: warning: 31 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: symbol PyErr_SetString used by debian/python-gobject-2/usr/lib/libpyglib-2.0-python2.7.so.0.0.0 found in none of the libraries
+dpkg-shlibdeps: warning: symbol _Py_NotImplementedStruct used by debian/python-gobject-2/usr/lib/libpyglib-2.0-python2.7.so.0.0.0 found in none of the libraries
+dpkg-shlibdeps: warning: symbol PyDict_SetItem used by debian/python-gobject-2/usr/lib/libpyglib-2.0-python2.7.so.0.0.0 found in none of the libraries
+dpkg-shlibdeps: warning: symbol _Py_NoneStruct used by debian/python-gobject-2/usr/lib/libpyglib-2.0-python2.7.so.0.0.0 found in none of the libraries
+dpkg-shlibdeps: warning: symbol PyErr_Print used by debian/python-gobject-2/usr/lib/libpyglib-2.0-python2.7.so.0.0.0 found in none of the libraries
+dpkg-shlibdeps: warning: symbol PyImport_ImportModule used by debian/python-gobject-2/usr/lib/libpyglib-2.0-python2.7.so.0.0.0 found in none of the libraries
+dpkg-shlibdeps: warning: symbol PyObject_CallObject used by debian/python-gobject-2/usr/lib/libpyglib-2.0-python2.7.so.0.0.0 found in none of the libraries
+dpkg-shlibdeps: warning: symbol PyObject_Repr used by debian/python-gobject-2/usr/lib/libpyglib-2.0-python2.7.so.0.0.0 found in none of the libraries
+dpkg-shlibdeps: warning: symbol PyErr_Restore used by debian/python-gobject-2/usr/lib/libpyglib-2.0-python2.7.so.0.0.0 found in none of the libraries
+dpkg-shlibdeps: warning: symbol PyErr_SetObject used by debian/python-gobject-2/usr/lib/libpyglib-2.0-python2.7.so.0.0.0 found in none of the libraries
+dpkg-shlibdeps: warning: 28 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/python-gobject-2/usr/lib/python2.7/dist-packages/gobject/_gobject.so contains an unresolvable reference to symbol PyDict_SetItem: it's probably a plugin
+dpkg-shlibdeps: warning: 119 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/python-gobject-2-dbg/usr/lib/python2.7/dist-packages/gtk-2.0/gio/_gio_d.so contains an unresolvable reference to symbol PyExc_NotImplementedError: it's probably a plugin
+dpkg-shlibdeps: warning: debian/python-gobject-2/usr/lib/python2.7/dist-packages/gtk-2.0/gio/unix.so contains an unresolvable reference to symbol PyErr_SetString: it's probably a plugin
+dpkg-shlibdeps: warning: 25 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: 75 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/python-gobject-2-dbg/usr/lib/python2.7/dist-packages/gtk-2.0/gio/unix_d.so contains an unresolvable reference to symbol PyObject_Repr: it's probably a plugin
+dpkg-shlibdeps: warning: 29 other similar warnings have been skipped (use -v to see them all)
+dh_gencontrol -s
+dh_gencontrol: Compatibility levels before 9 are deprecated (level 7 in use)
+dh_gencontrol: -s/--same-arch is deprecated; please use -a/--arch instead
+dh_gencontrol: This feature will be removed in compat 12.
+dpkg-gencontrol: warning: package python-gobject-2: substitution variable ${python:Versions} unused, but is defined
+dpkg-gencontrol: warning: package python-gobject-2-dbg: substitution variable ${python:Provides} unused, but is defined
+dpkg-gencontrol: warning: package python-gobject-2-dbg: substitution variable ${python:Versions} unused, but is defined
+dh_md5sums -s
+dh_md5sums: Compatibility levels before 9 are deprecated (level 7 in use)
+dh_md5sums: -s/--same-arch is deprecated; please use -a/--arch instead
+dh_md5sums: This feature will be removed in compat 12.
+dh_builddeb -s
+dh_builddeb: Compatibility levels before 9 are deprecated (level 7 in use)
+dh_builddeb: -s/--same-arch is deprecated; please use -a/--arch instead
+dh_builddeb: This feature will be removed in compat 12.
+dpkg-deb: building package 'python-gobject-2' in '../python-gobject-2_2.28.6-13_amd64.deb'.
+dpkg-deb: building package 'python-gobject-2-dbg' in '../python-gobject-2-dbg_2.28.6-13_amd64.deb'.
+dh_testdir
+dh_testroot
+dh_installdocs -i
+dh_installdocs: Compatibility levels before 9 are deprecated (level 7 in use)
+dh_installexamples -i
+dh_installexamples: Compatibility levels before 9 are deprecated (level 7 in use)
+dh_installchangelogs ChangeLog -i
+dh_link -i
+dh_compress -i -X.py
+dh_compress: Compatibility levels before 9 are deprecated (level 7 in use)
+dh_fixperms -i
+# More permission fixing
+chmod 755 `grep -rl "^#\!.*python" debian/python-gobject-2-dev/usr`
+dh_python2 -i /usr/share/pygobject
+W: dh_python2:479: Please add dh-python package to Build-Depends
+dh_installdeb -i
+dh_installdeb: Compatibility levels before 9 are deprecated (level 7 in use)
+dh_gencontrol -i
+dh_md5sums -i
+dh_builddeb -i
+dpkg-deb: building package 'python-gobject-2-dev' in '../python-gobject-2-dev_2.28.6-13_all.deb'.
+ dpkg-genbuildinfo --build=binary
+ dpkg-genchanges --build=binary >../pygobject-2_2.28.6-13_amd64.changes
+dpkg-genchanges: info: binary-only upload (no source code included)
+ dpkg-source --after-build .
+dpkg-buildpackage: info: binary-only upload (no source included)
+Now running lintian pygobject-2_2.28.6-13_amd64.changes ...
+warning: the authors of lintian do not recommend running it with root privileges!
+W: python-gobject-2-dev: pkg-config-unavailable-for-cross-compilation usr/lib/pkgconfig/pygobject-2.0.pc
+W: python-gobject-2-dev: binary-without-manpage usr/bin/pygobject-codegen-2.0
+W: python-gobject-2: package-name-doesnt-match-sonames libpyglib-2.0-python2.7-0
+E: python-gobject-2: library-not-linked-against-libc usr/lib/libpyglib-2.0-python2.7.so.0.0.0
+E: python-gobject-2: library-not-linked-against-libc usr/lib/python2.7/dist-packages/gtk-2.0/gio/unix.so
+W: python-gobject-2-dbg: package-name-doesnt-match-sonames libpyglib-2.0-python2.7-dbg0
+E: python-gobject-2-dbg: library-not-linked-against-libc usr/lib/libpyglib-2.0-python2.7-dbg.so.0.0.0
+E: python-gobject-2-dbg: library-not-linked-against-libc usr/lib/python2.7/dist-packages/gtk-2.0/gio/unix_d.so
+W: python-gobject-2-dbg: priority-extra-is-replaced-by-priority-optional
+W: python-gobject-2-dbg: non-dev-pkg-with-shlib-symlink usr/lib/libpyglib-2.0-python2.7-dbg.so.0.0.0 usr/lib/libpyglib-2.0-python2.7-dbg.so
+Finished running lintian.
+Now signing changes and any dsc files...
+ signfile buildinfo pygobject-2_2.28.6-13_amd64.buildinfo Emilio Pozuelo Monfort <pochu@debian.org>
+gpg: skipped "Emilio Pozuelo Monfort <pochu@debian.org>": No secret key
+gpg: /tmp/debsign.lkVVTlIA/pygobject-2_2.28.6-13_amd64.buildinfo: clear-sign failed: No secret key
+debsign: gpg error occurred!  Aborting....

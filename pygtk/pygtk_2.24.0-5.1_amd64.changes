@@ -1,0 +1,44 @@
+Format: 1.8
+Date: Fri, 07 Oct 2016 14:49:35 +0100
+Source: pygtk
+Binary: python-glade2 python-gtk2 python-gtk2-dbg python-gtk2-dev python-gtk2-doc
+Architecture: amd64 all
+Version: 2.24.0-5.1
+Distribution: unstable
+Urgency: medium
+Maintainer: Sebastien Bacher <seb128@debian.org>
+Changed-By: James Clarke <jrtc27@jrtc27.com>
+Description:
+ python-glade2 - GTK+ bindings: Glade support
+ python-gtk2 - Python bindings for the GTK+ widget set
+ python-gtk2-dbg - Python bindings for the GTK+ widget set (debug extension)
+ python-gtk2-dev - GTK+ bindings: devel files
+ python-gtk2-doc - Python bindings for the GTK+ widget set - documentation
+Closes: 839867
+Changes:
+ pygtk (2.24.0-5.1) unstable; urgency=medium
+ .
+   * Non-maintainer upload.
+   * 05_Fix_GdkColor_pixel_parse.patch: Fix bus error on sparc64.
+     Closes: #839867.
+Checksums-Sha1:
+ 4172ef15a6bad5c9fa132cb4ba99cca5d103cce3 14448 pygtk_2.24.0-5.1_amd64.buildinfo
+ e644d11b8006ad8b97e296301beb4ea22c786000 43296 python-glade2_2.24.0-5.1_amd64.deb
+ 075c3d1b60b16c1c0b29c48b551e6f0e02f99539 2633576 python-gtk2-dbg_2.24.0-5.1_amd64.deb
+ 56393d1efea102c801fc25c1a8c8152b9a9c22cc 146388 python-gtk2-dev_2.24.0-5.1_all.deb
+ 7ba2a6f0bc3e260d1d7ec0661e46bc095da74b7d 1038892 python-gtk2-doc_2.24.0-5.1_all.deb
+ 484865b386bf7944371ceb2e8f542bc6d70800f5 634112 python-gtk2_2.24.0-5.1_amd64.deb
+Checksums-Sha256:
+ 09817c174730e21e1450855a2772cd264f60279c755f2a607aff85b21ecdd32d 14448 pygtk_2.24.0-5.1_amd64.buildinfo
+ b48657a0e977ba9456be593617bbb280d77d7b57ca2d24362071e3cf48b889f8 43296 python-glade2_2.24.0-5.1_amd64.deb
+ 6ae6cf79c3a695827bc84104ed70d7300eedc9e07fb8719a85b5034dca7fcf08 2633576 python-gtk2-dbg_2.24.0-5.1_amd64.deb
+ e4adad9c7d27c55c932ca3446aba6cb1eaee5dcce3cbe80f2137fd0a4f917306 146388 python-gtk2-dev_2.24.0-5.1_all.deb
+ 689167d4e6a76dc5b180ecdebe0903dadc4b1168960720fb05347b77b336cb08 1038892 python-gtk2-doc_2.24.0-5.1_all.deb
+ e38607e156fec3b9e0ca69acaf61bf9722ce8e283831973b035c0bcf8bbcabd1 634112 python-gtk2_2.24.0-5.1_amd64.deb
+Files:
+ 1e4a0729aabf218a3d7351fb0b3bb5f2 14448 python optional pygtk_2.24.0-5.1_amd64.buildinfo
+ ac26fa5ff51870aca3a7d6b2f2d47146 43296 python optional python-glade2_2.24.0-5.1_amd64.deb
+ 31a4c2f568931191095578d5dd6d1bac 2633576 debug extra python-gtk2-dbg_2.24.0-5.1_amd64.deb
+ 7b7deb7e0e066a22ac9d132bcab88b55 146388 python optional python-gtk2-dev_2.24.0-5.1_all.deb
+ 05ee6a2401d0904fd764390c9a4da241 1038892 doc optional python-gtk2-doc_2.24.0-5.1_all.deb
+ afc04a1f9809a860ef8161b8df81b379 634112 python optional python-gtk2_2.24.0-5.1_amd64.deb
